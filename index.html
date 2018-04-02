@@ -7,15 +7,26 @@
 <html>
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33910146-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33910146-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-  gtag('config', 'UA-33910146-1');
-</script>
+		gtag('config', 'UA-33910146-1');
+		</script>
 
+		<script>
+		/**
+		* Function that tracks a click on an outbound link in Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+		* using 'navigator.sendBeacon' in browser that support it.
+		*/
+		var trackOutboundLink = function(label) {
+		   ga('send', 'event', 'outbound', 'click', label)
+		}
+		</script>
 
 		<title>Michael Nguyen - iOS Developer</title>
 		<meta charset="utf-8" />
@@ -40,11 +51,11 @@
 						</header>
 						<footer>
 							<ul class="icons">
-								<li><a href="https://twitter.com/micngu" class="fa-twitter" target="_blank">Twitter</a></li>
-								<li><a href="https://github.com/micnguyen" class="fa-github" target="_blank">GitHub</a></li>
-								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" target="_blank">Email</a></li>
-								<li><a href="https://www.facebook.com/mic.nguyen" class="fa-facebook" target="_blank">Facebook</a></li>
-								<li><a href="https://medium.com/@micngu" class="fa-medium" target="_blank">Medium</a></li>
+								<li><a href="https://twitter.com/micngu" class="fa-twitter" target="_blank" onclick="trackOutboundLink('Twitter')">Twitter</a></li>
+								<li><a href="https://github.com/micnguyen" class="fa-github" target="_blank" onclick="trackOutboundLink('GitHub')">GitHub</a></li>
+								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" target="_blank" onclick="trackOutboundLink('Email')">Email</a></li>
+								<li><a href="https://www.facebook.com/mic.nguyen" class="fa-facebook" target="_blank" onclick="trackOutboundLink('Facebook')">Facebook</a></li>
+								<li><a href="https://medium.com/@micngu" class="fa-medium" target="_blank" onclick="trackOutboundLink('Medium')">Medium</a></li>
 							</ul>
 						</footer>
 					</section>
