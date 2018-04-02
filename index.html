@@ -15,19 +15,6 @@
 
 		gtag('config', 'UA-33910146-1');
 		</script>
-
-		<script>
-		/**
-		* Function that tracks a click on an outbound link in Analytics.
-		* This function takes a valid URL string as an argument, and uses that URL string
-		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-		* using 'navigator.sendBeacon' in browser that support it.
-		*/
-		var trackOutboundLink = function(label) {
-		   ga('send', 'event', 'outbound', 'click', label);
-		}
-		</script>
-
 		<title>Michael Nguyen - iOS Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,11 +38,11 @@
 						</header>
 						<footer>
 							<ul class="icons">
-								<li><a href="https://twitter.com/micngu" class="fa-twitter" target="_blank" onclick="trackOutboundLink('Twitter')">Twitter</a></li>
-								<li><a href="https://github.com/micnguyen" class="fa-github" target="_blank" onclick="trackOutboundLink('GitHub')">GitHub</a></li>
-								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" target="_blank" onclick="trackOutboundLink('Email')">Email</a></li>
-								<li><a href="https://www.facebook.com/mic.nguyen" class="fa-facebook" target="_blank" onclick="trackOutboundLink('Facebook')">Facebook</a></li>
-								<li><a href="https://medium.com/@micngu" class="fa-medium" target="_blank" onclick="trackOutboundLink('Medium')">Medium</a></li>
+								<li><a href="https://twitter.com/micngu" class="fa-twitter" target="_blank" onClick="ga('send', 'event', 'click', 'Twitter');">Twitter</a></li>
+								<li><a href="https://github.com/micnguyen" class="fa-github" target="_blank" onClick="ga('send', 'event', 'click', 'GitHub');">GitHub</a></li>
+								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" target="_blank" onClick="ga('send', 'event', 'click', 'Email');">Email</a></li>
+								<li><a href="https://www.facebook.com/mic.nguyen" class="fa-facebook" target="_blank" onClick="ga('send', 'event', 'click', 'Facebook');">Facebook</a></li>
+								<li><a href="https://medium.com/@micngu" class="fa-medium" target="_blank" onClick="ga('send', 'event', 'click', 'Medium');"">Medium</a></li>
 							</ul>
 						</footer>
 					</section>
