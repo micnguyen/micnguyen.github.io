@@ -38,7 +38,10 @@
 						</header>
 						<footer>
 							<ul class="icons">
-								<li><a href="https://twitter.com/micngu" class="fa-twitter" onClick="ga('send', 'event', 'click', 'Twitter');">Twitter</a></li>
+								<li><a href="https://twitter.com/micngu" class="fa-twitter" onClick="gtag('event', 'click', {
+									'event_label': 'Twitter'
+
+								});">Twitter</a></li>
 								<li><a href="https://github.com/micnguyen" class="fa-github" onClick="ga('send', 'event', 'click', 'GitHub');" target="_blank">GitHub</a></li>
 								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" target="_blank" onClick="ga('send', 'event', 'click', 'Email');">Email</a></li>
 								<li><a href="https://www.facebook.com/mic.nguyen" class="fa-facebook" target="_blank" onClick="ga('send', 'event', 'click', 'Facebook');">Facebook</a></li>
