@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+            <script>
+                    var now = new Date().valueOf();
+                    setTimeout(function () {
+                    if (new Date().valueOf() - now > 100) return;
+                            window.location.href = "http://www.abc.net.au";
+                    }, 50);
+                    window.location.href = "digitalid://hello";// Add your code here
+                </script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33910146-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-33910146-1');
+		</script>
+		<title>Michael Nguyen - iOS Developer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/avatar.jpg" alt="" width="140"/></span>
+							<h1>Michael Nguyen</h1>
+							<p>iOS Developer specialising in Enterprise mobile applications, mobile CI/CD, software architecture and automated testing.</p>
+						</header>
+						<footer>
+							<ul class="icons">
+								<li><a href="https://twitter.com/micngu" class="fa-twitter" onClick="gtag('event', 'Twitter', {
+									'event_category': 'External Link Click',
+								});" target="_blank">Twitter</a></li>
+								<li><a href="https://github.com/micnguyen" class="fa-github" onClick="gtag('event', 'GitHub', {
+									'event_category': 'External Link Click',
+								});" target="_blank">GitHub</a></li>
+								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" onClick="gtag('event', 'Email', {
+									'event_category': 'External Link Click',
+								});" target="_blank">Email</a></li>
+								<li><a href="https://www.linkedin.com/in/micngu/" class="fa-linkedin" onClick="gtag('event', 'LinkedIn', {
+									'event_category': 'External Link Click',
+								});" target="_blank">Facebook</a></li>
+								<li><a href="https://medium.com/@micngu" class="fa-medium" onClick="gtag('event', 'Medium', {
+									'event_category': 'External Link Click',
+								});" target="_blank">Medium</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Michael Nguyen</li><li>Design: <a href="digitalid:test123">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
