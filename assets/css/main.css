@@ -24,7 +24,7 @@
 		margin: 15px;
 		/* width: 80%; */
 		min-width: 200px;
-		max-width: 300px;
+		max-width: 414px;
 		/* height: 430px; */
 		/* width: 40%; */
 		/* padding-bottom: 56.25%; */
@@ -61,6 +61,7 @@
 	}
 
 	div.thumbnailtext {
+		margin: -10px 0px 0px 0px;
 		width: 100%;
 		background: #ffffff;
 		padding: 10px;
@@ -579,12 +580,12 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
-			margin-top: -0.675em;
+			margin-top: 1.5em;
 		}
 
 			ul.icons li {
 				display: inline-block;
-				padding: 0.675em 0.5em;
+				padding: 0.675em 0.30em;
 			}
 
 				ul.icons li a {
