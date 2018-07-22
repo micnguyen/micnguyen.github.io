@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
+/* @import url(font-awesome.min.css); */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600");
 
 /*
@@ -40,6 +40,11 @@
 		/* background: #313f47 */
 		/* margin: 50px; */
 		/* text-align: center */
+	}
+
+	div.social {
+		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 
 	div.row {
@@ -87,6 +92,11 @@
 		/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 		/* max-width: 100%; */
 		/* max-height: 100%; */
+	}
+
+	i.social {
+		font-size: 2.2em;
+		padding: 10px 25px 10px 25px;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -253,7 +263,7 @@
 	}
 
 	p {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -270,7 +280,8 @@
 	h1 {
 		font-size: 1.85em;
 		letter-spacing: 0.22em;
-		margin: 0 0 0.525em 0;
+		margin: 0 0 0 0;
+		padding-bottom: 1em;
 	}
 
 	h2 {

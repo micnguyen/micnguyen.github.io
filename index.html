@@ -7,6 +7,10 @@
 <html>
 	<head>
 		<link rel="icon" href="images/favicon.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/solid.css" integrity="sha384-S2gVFTIn1tJ/Plf+40+RRAxBCiBU5oAMFUJxTXT3vOlxtXm7MGjVj62mDpbujs4C" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/regular.css" integrity="sha384-QNorH84/Id/CMkUkiFb5yTU3E/qqapnCVt6k5xh1PFIJ9hJ8VfovwwH/eMLQTjGS" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/brands.css" integrity="sha384-SYNjKRRe+vDW0KSn/LrkhG++hqCLJg9ev1jIh8CHKuEA132pgAz+WofmKAhPpTR7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css" integrity="sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ" crossorigin="anonymous">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33910146-1"></script>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
@@ -36,26 +40,33 @@
 						<header>
 							<span class="avatar"><img src="images/avatar.jpg" alt="" width="140"/></span>
 							<h1>MICHAEL NGUYEN</h1>
-							<p>iOS Developer specialising in Enterprise mobile applications, mobile CI/CD, software architecture and automated testing.</p>
+							<p>iOS Developer specialising in Enterprise mobile applications, mobile CI/CD, software architecture, automated testing & UI/UX.</p>
 						</header>
 						<footer>
-							<ul class="icons">
-								<li><a href="https://twitter.com/micngu" class="fa-twitter" onClick="gtag('event', 'Twitter', {
+							<!-- <ul class="icons"> -->
+								<div class="social">
+								<a href="https://twitter.com/micngu"  onClick="gtag('event', 'Twitter', {
+										'event_category': 'External Link Click',
+									});" target="_blank"><i class="fab fa-twitter social"></i>
+								</a>
+
+								<a href="https://github.com/micnguyen" onClick="gtag('event', 'GitHub', {
 									'event_category': 'External Link Click',
-								});" target="_blank">Twitter</a></li>
-								<li><a href="https://github.com/micnguyen" class="fa-github" onClick="gtag('event', 'GitHub', {
+								});" target="_blank"><i class="fab fa-github social"></i></a>
+
+								<a href="mailto:contact@micnguyen.net"onClick="gtag('event', 'Email', {
 									'event_category': 'External Link Click',
-								});" target="_blank">GitHub</a></li>
-								<li><a href="mailto:contact@micnguyen.net" class="fa-envelope" onClick="gtag('event', 'Email', {
+								});" target="_blank"><i class="fas fa-envelope social"></i></a>
+
+								<a href="https://www.linkedin.com/in/micngu/" onClick="gtag('event', 'LinkedIn', {
 									'event_category': 'External Link Click',
-								});" target="_blank">Email</a></li>
-								<li><a href="https://www.linkedin.com/in/micngu/" class="fa-linkedin" onClick="gtag('event', 'LinkedIn', {
+								});" target="_blank"><i class="fab fa-linkedin social"></i></a>
+
+								<a href="https://medium.com/@micngu" onClick="gtag('event', 'Medium', {
 									'event_category': 'External Link Click',
-								});" target="_blank">Facebook</a></li>
-								<li><a href="https://medium.com/@micngu" class="fa-medium" onClick="gtag('event', 'Medium', {
-									'event_category': 'External Link Click',
-								});" target="_blank">Medium</a></li>
-							</ul>
+								});" target="_blank"><i class="fab fa-medium social"></i></a>
+							</div>
+							<!-- </ul> -->
 						</footer>
 						<div class="row">
 								<div class="thumbnail">
@@ -119,7 +130,18 @@
 										</div>
 									</a>
 								</div>
-								
+								<div class="thumbnail">
+										<a href="https://www.nab.com.au/business/online-banking/nab-connect-mobile" target="_blank" onClick="gtag('event', 'Portfolio: NAB Connect', {
+											'event_category': 'External Link Click',
+										});">
+											<img src="images/nabconnect.jpg" class="portfolioitem">
+											<div class="thumbnailtext">
+												<p class="title">NAB Connect</p>
+												<p class="subtitle">National Australia Bank</p>
+												<p class="subtitle">Consulting, Development</p>
+											</div>
+										</a>
+								</div>
 								<div class="thumbnail">
 									<a 
 									href="https://itunes.apple.com/au/app/skinnyme-tea-teatox-tracker/id934284978?mt=8" target="_blank" onClick="gtag('event', 'Portfolio: SMT', {
