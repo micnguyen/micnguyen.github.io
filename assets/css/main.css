@@ -65,6 +65,10 @@
 		text-align: left;
 	}
 
+	a.social {
+		display: inline-block
+	}
+	
 	div.thumbnailtext {
 		margin: -10px 0px 0px 0px;
 		width: 100%;
