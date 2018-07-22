@@ -40,12 +40,27 @@
 		/* background: #313f47 */
 		/* margin: 50px; */
 		/* text-align: center */
+		transition: transform .2s;
 	}
+
+	div.thumbnail:hover {
+		-ms-transform: scale(1.05); /* IE 9 */
+		-webkit-transform: scale(1.05); /* Safari 3-8 */
+		transform: scale(1.05); 
+	}
+
 
 	div.social {
 		padding-top: 2em;
 		padding-bottom: 2em;
+		/* transition: transform .2s; */
 	}
+
+	/* div.social:hover {
+		-ms-transform: scale(1.5); /* IE 9 */
+		-webkit-transform: scale(1.5); /* Safari 3-8 */
+		transform: scale(1.1); 
+	} */
 
 	div.row {
 		width: 100%;
