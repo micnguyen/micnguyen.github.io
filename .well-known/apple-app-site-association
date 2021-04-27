@@ -3,7 +3,7 @@
         "apps": [],
         "details": [
             {
-                "appID": "org.reactjs.native.example.moulapay",
+                "appID": "89KURNWUQ7.org.reactjs.native.example.moulapay",
                 "paths": [ "/mobileapp/*"]
             }
         ]
