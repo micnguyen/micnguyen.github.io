@@ -4,7 +4,13 @@
         "details": [
             {
                 "appID": "89KURNWUQ7.org.reactjs.native.example.moulapay",
-                "paths": [ "/mobileapp/*"]
+                "paths": [ "/mobileapp/*"],
+                "appIDs": [ "89KURNWUQ7.org.reactjs.native.example.moulapay" ],
+                "components": [
+                    {
+                        "/": "/mobileapp/*"
+                    }
+                ]
             }
         ]
     }
