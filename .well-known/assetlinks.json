@@ -1,9 +1,16 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "au.com.moula.moulapay.android",
-    "sha256_cert_fingerprints":
-    ["32:E1:F1:2C:96:26:00:70:0F:BE:D9:C7:32:70:D3:78:4E:60:EE:FC:48:5C:9C:77:13:20:BC:EF:8F:41:26:9E"]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "au.com.moula.moulapay.android",
+      "sha256_cert_fingerprints": [
+        "32:E1:F1:2C:96:26:00:70:0F:BE:D9:C7:32:70:D3:78:4E:60:EE:FC:48:5C:9C:77:13:20:BC:EF:8F:41:26:9E",
+        "44:9B:C4:DD:EE:13:50:B0:0E:EE:4B:8C:5D:85:D3:F1:8A:40:7C:03:C1:B2:6A:7F:5D:4F:B9:C6:75:54:1D:A4",
+        "EB:9F:A7:38:EA:6C:11:ED:F7:8B:E7:D3:9B:AC:C7:FA:B0:C5:7A:50:A4:94:84:D3:78:4E:78:67:52:D0:56:17"
+      ]
+    }
   }
-}]
+]
