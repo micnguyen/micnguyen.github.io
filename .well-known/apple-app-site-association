@@ -4,11 +4,15 @@
         "details": [
             {
                 "appID": "86D3MUPZZ3.au.com.moula.moulapay.ios",
-                "paths": [ "/mobileapp/*"],
-                "appIDs": [ "86D3MUPZZ3.au.com.moula.moulapay.ios" ],
+                "paths": [
+                    "/qrcode"
+                ],
+                "appIDs": [
+                    "86D3MUPZZ3.au.com.moula.moulapay.ios"
+                ],
                 "components": [
                     {
-                        "/": "/mobileapp/*"
+                        "/": "/qrcode"
                     }
                 ]
             }
