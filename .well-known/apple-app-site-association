@@ -5,14 +5,14 @@
             {
                 "appID": "86D3MUPZZ3.au.com.moula.moulapay.ios",
                 "paths": [
-                    "/qrcode"
+                    "/qrcode*"
                 ],
                 "appIDs": [
                     "86D3MUPZZ3.au.com.moula.moulapay.ios"
                 ],
                 "components": [
                     {
-                        "/": "/qrcode"
+                        "/": "/qrcode*"
                     }
                 ]
             }
