@@ -370,6 +370,11 @@
 		margin: 0 0 0.75em 0;
 	}
 
+  .intro {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
