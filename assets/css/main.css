@@ -944,14 +944,14 @@ button:disabled,
 	cursor: default;
 	opacity: 1;
 	text-align: center;
-	-moz-transform-origin: 50% 50%;
+	/* -moz-transform-origin: 50% 50%;
 	-webkit-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	-moz-transform: rotateX(0deg);
 	-webkit-transform: rotateX(0deg);
 	-ms-transform: rotateX(0deg);
-	transform: rotateX(0deg);
+	transform: rotateX(0deg); */
 	/* -moz-transition: opacity 1s ease, -moz-transform 1s ease;
 	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -998,13 +998,13 @@ button:disabled,
 
 }
 
-body.is-loading #main {
+/* body.is-loading #main {
 	opacity: 0;
 	-moz-transform: rotateX(15deg);
 	-webkit-transform: rotateX(15deg);
 	-ms-transform: rotateX(15deg);
 	transform: rotateX(15deg);
-}
+} */
 
 /* Footer */
 
