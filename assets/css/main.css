@@ -123,20 +123,20 @@ div.thumbnail:hover {
 }
 
 
-div.social {
+/* div.social {
 	padding-top: 2em;
 	padding-bottom: 2em;
 	transition: transform .2s;
-}
+} */
 
-div.social:hover {
+/* div.social:hover {
 	-ms-transform: scale(1.5);
 	/* IE 9 */
-	-webkit-transform: scale(1.5);
-	transform: scale(1.1);
+-webkit-transform: scale(1.5);
+transform: scale(1.1);
 }
 
-div.row {
+*/ div.row {
 	width: 100%;
 }
 
@@ -154,9 +154,9 @@ p.subtitle {
 	text-align: left;
 }
 
-a.social {
+/* a.social {
 	display: inline-block
-}
+} */
 
 div.thumbnailtext {
 	margin: -10px 0px 0px 0px;
@@ -195,10 +195,10 @@ img.portfolioitem {
 	/* max-height: 100%; */
 }
 
-i.social {
+/* i.social {
 	font-size: 2.2em;
 	padding: 10px 25px 10px 25px;
-}
+} */
 
 article,
 aside,
@@ -551,7 +551,7 @@ textarea:focus {
 	position: relative;
 }
 
-.select-wrapper:before {
+/* .select-wrapper:before {
 	content: "";
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -559,7 +559,7 @@ textarea:focus {
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
-}
+} */
 
 .select-wrapper:before {
 	color: #c8cccf;
@@ -616,7 +616,7 @@ input[type="radio"]+label {
 	position: relative;
 }
 
-input[type="checkbox"]+label:before,
+/* input[type="checkbox"]+label:before,
 input[type="radio"]+label:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -624,7 +624,7 @@ input[type="radio"]+label:before {
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
-}
+} */
 
 input[type="checkbox"]+label:before,
 input[type="radio"]+label:before {
@@ -693,14 +693,14 @@ input[type="radio"]+label:before {
 	border-bottom: none;
 }
 
-.icon:before {
+/* .icon:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
-}
+} */
 
 .icon>.label {
 	display: none;
@@ -771,14 +771,14 @@ ul.icons li a {
 	white-space: nowrap;
 }
 
-ul.icons li a:before {
+/* ul.icons li a:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
-}
+} */
 
 ul.icons li a:before {
 	color: #ffffff;
