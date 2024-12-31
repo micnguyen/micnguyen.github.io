@@ -123,18 +123,17 @@ div.thumbnail:hover {
 }
 
 
-/* div.social {
+div.social {
 	padding-top: 2em;
 	padding-bottom: 2em;
 	transition: transform .2s;
-} */
+}
 
 /* div.social:hover {
 	-ms-transform: scale(1.5);
-	/* IE 9 */
--webkit-transform: scale(1.5);
-transform: scale(1.1);
-}
+	-webkit-transform: scale(1.5);
+	transform: scale(1.1);
+} */
 
 */ div.row {
 	width: 100%;
@@ -154,9 +153,9 @@ p.subtitle {
 	text-align: left;
 }
 
-/* a.social {
+a.social {
 	display: inline-block
-} */
+}
 
 div.thumbnailtext {
 	margin: -10px 0px 0px 0px;
@@ -195,10 +194,17 @@ img.portfolioitem {
 	/* max-height: 100%; */
 }
 
-/* i.social {
+i.social {
 	font-size: 2.2em;
 	padding: 10px 25px 10px 25px;
-} */
+}
+
+i.social:hover {
+	/* color: #ff7496; */
+	-ms-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	transform: scale(1.1);
+}
 
 article,
 aside,
@@ -382,6 +388,9 @@ a:before {
 
 a:hover {
 	color: #ff7496;
+	-ms-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	transform: scale(1.1);
 }
 
 strong,
