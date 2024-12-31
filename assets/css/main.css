@@ -140,10 +140,10 @@ div.social {
 
 /* div.social:hover {
 		-ms-transform: scale(1.5); /* IE 9 */
--webkit-transform: scale(1.5);
+/* -webkit-transform: scale(1.5); */
 /* Safari 3-8 */
-transform: scale(1.1);
-}
+/* transform: scale(1.1); */
+/* } */
 
 */ div.row {
 	width: 100%;
@@ -952,10 +952,10 @@ button:disabled,
 	-webkit-transform: rotateX(0deg);
 	-ms-transform: rotateX(0deg);
 	transform: rotateX(0deg);
-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+	/* -moz-transition: opacity 1s ease, -moz-transform 1s ease;
 	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-	transition: opacity 1s ease, transform 1s ease;
+	transition: opacity 1s ease, transform 1s ease; */
 }
 
 #main .avatar {
