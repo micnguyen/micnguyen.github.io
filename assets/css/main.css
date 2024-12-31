@@ -126,17 +126,17 @@ div.thumbnail:hover {
 div.social {
 	padding-top: 2em;
 	padding-bottom: 2em;
-	/* transition: transform .2s; */
+	transition: transform .2s;
 }
 
-/* div.social:hover {
-		-ms-transform: scale(1.5); /* IE 9 */
-/* -webkit-transform: scale(1.5); */
-/* Safari 3-8 */
-/* transform: scale(1.1); */
-/* } */
+div.social:hover {
+	-ms-transform: scale(1.5);
+	/* IE 9 */
+	-webkit-transform: scale(1.5);
+	transform: scale(1.1);
+}
 
-*/ div.row {
+div.row {
 	width: 100%;
 }
 
@@ -279,10 +279,10 @@ html {
 body {
 	height: 100%;
 	background-color: #ffffff;
-	background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(150, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.jpg");
-	background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.jpg");
-	background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.jpg");
-	background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.jpg");
+	background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(150, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
+	background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
+	background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
+	background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
 	background-repeat: repeat, no-repeat, no-repeat;
 	background-size: 100px 100px, cover, cover;
 	background-position: top left, center center, bottom center;
