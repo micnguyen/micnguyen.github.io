@@ -100,7 +100,6 @@ div.thumbnail {
 	/* width: 40%; */
 	/* padding-bottom: 56.25%; */
 	/* opacity: 100%; */
-	/* background-image: url('nab1.jpg'); */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	/* box-shadow: rgba(0,0,0,0.8) 0 0 10px; */
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -115,10 +114,6 @@ div.thumbnail {
 }
 
 div.thumbnail:hover {
-	-ms-transform: scale(1.05);
-	/* IE 9 */
-	-webkit-transform: scale(1.05);
-	/* Safari 3-8 */
 	transform: scale(1.05);
 }
 
@@ -126,7 +121,12 @@ div.thumbnail:hover {
 div.social {
 	padding-top: 2em;
 	padding-bottom: 2em;
-	transition: transform .2s;
+
+}
+
+
+a.social:hover {
+	color: #ff7496;
 }
 
 /* div.social:hover {
@@ -158,12 +158,13 @@ a.social {
 }
 
 div.thumbnailtext {
-	margin: -10px 0px 0px 0px;
+	/* margin: 0px 0px 0px 0px; */
+	margin: 10px;
 	width: 100%;
 	background: #ffffff;
-	padding: 10px;
-	padding-left: 5%;
-	padding-right: 5%;
+	/* padding: 10px; */
+	/* padding-left: 5%; */
+	/* padding-right: 5%; */
 	font-family: "Open Sans", serif;
 	font-optical-sizing: auto;
 	font-weight: 100;
@@ -195,8 +196,8 @@ img.portfolioitem {
 }
 
 i.social {
-	font-size: 2.2em;
-	padding: 10px 25px 10px 25px;
+	font-size: 2em;
+	padding: 10px 10px 10px 20px;
 }
 
 i.social:hover {
@@ -387,10 +388,8 @@ a:before {
 }
 
 a:hover {
-	color: #ff7496;
-	-ms-transform: scale(1.5);
-	-webkit-transform: scale(1.5);
-	transform: scale(1.1);
+	/* color: #ff7496; */
+	/* transform: scale(1.1); */
 }
 
 strong,

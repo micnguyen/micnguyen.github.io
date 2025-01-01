@@ -2,43 +2,23 @@
 <html lang="en">
 
 <head>
+	<link rel="icon" href="images/favicon.png">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="description" content="Michael Nguyen is an Australian based mobile software engineering lead">
-	<link rel="icon" href="images/favicon.png">
-
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/solid.css"
-		integrity="sha384-S2gVFTIn1tJ/Plf+40+RRAxBCiBU5oAMFUJxTXT3vOlxtXm7MGjVj62mDpbujs4C" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/brands.css"
-		integrity="sha384-SYNjKRRe+vDW0KSn/LrkhG++hqCLJg9ev1jIh8CHKuEA132pgAz+WofmKAhPpTR7" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css"
-		integrity="sha384-0b7ERybvrT5RZyD80ojw6KNKz6nIAlgOKXIcJ0CV7A6Iia8yt2y1bBfLBOwoc9fQ" crossorigin="anonymous"> -->
-
-
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:700" as="style"
-		onload="this.onload=null;this.rel='stylesheet'">
-	<noscript> -->
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
 		rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high" />
-	<!-- </noscript> -->
 
 	<title>Michael Nguyen</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- <script src="https://kit.fontawesome.com/57b281ce50.js" crossorigin="anonymous"></script> -->
 	<link href="assets/fonts/fontawesome/css/brands.css" rel="stylesheet" />
 	<link href="assets/fonts/fontawesome/css/solid.css" rel="stylesheet" />
 	<link href="assets/fonts/fontawesome/css/fontawesome.css" rel="stylesheet" />
 	<link href="assets/fonts/fontawesome/css/brands.css" rel="stylesheet" />
 	<link href="assets/fonts/fontawesome/css/solid.css" rel="stylesheet" />
-	<!-- <link href="assets/fonts/fontawesome/css/sharp-thin.css" rel="stylesheet" /> -->
-	<!-- <link href="assets/fonts/fontawesome/css/duotone-thin.css" rel="stylesheet" /> -->
-	<!-- <link href="assets/fonts/fontawesome/css/sharp-duotone-thin.css" rel="stylesheet" /> -->
 
 
 	<!-- Google tag (gtag.js) -->
@@ -52,17 +32,10 @@
 	</script>
 
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<!-- <noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript> -->
 </head>
 
 <body>
-
-	<!-- Wrapper -->
 	<div id="wrapper">
-
-		<!-- Main -->
 		<section id="main">
 			<header>
 				<span class="avatar"><img src="images/avatar.webp" alt="Michael Nguyen Avatar" width="140" /></span>
@@ -78,73 +51,101 @@
 					Design. He enjoys working with high-calibre, cross-disciplined teams creating easy to use software for
 					customers and enjoys working between the intersection of technical, product and business.
 				</p>
-
-				<!-- <p class="intro">hi -->
-				</p>
 			</header>
-			<!-- <ul class="icons"> -->
-			<div class="social">
-				<!-- <a href="https://twitter.com/micngu" onClick="gtag('event', 'Twitter', {
-										'event_category': 'External Link Click',
-									});" target="_blank" class="social"><i class="fab fa-twitter social"></i>
-								</a> -->
 
+			<div class="social">
 				<a href="https://github.com/micnguyen" onClick="gtag('event', 'click', {
-					event_category: 'link',
+					event_name: 'click',
+					event_category: 'social_link',
 					event_label: 'github',
 				});" target="_blank" class="social"><i class="fab fa-github social"></i></a>
 
 				<a href="mailto:contact@micnguyen.net" onClick="gtag('event', 'click', {
-					event_category: 'link',
+					event_name: 'click',
+					event_category: 'social_link',
 					event_label: 'email',
 				});" target="_blank" class="social"><i class="fas fa-envelope social"></i></a>
 
 				<a href="https://www.linkedin.com/in/micngu/" onClick="gtag('event', 'click', {
-					event_category: 'link',
+					event_name: 'click',
+					event_category: 'social_link',
 					event_label: 'linkedin',
 				});" target="_blank" class="social"><i class="fab fa-linkedin social"></i></a>
 
 				<a href="https://bsky.app/profile/micnguyen.net" onClick="gtag('event', 'click', {
-					event_category: 'link',
+					event_name: 'click',
+					event_category: 'social_link',
 					event_label: 'bluesky',
 				});" target="_blank" class="social"><i class="fa-brands fa-square-bluesky social"></i></a>
-
-				<!-- <a href="https://medium.com/@micngu" onClick="gtag('event', 'Medium', {
-									'event_category': 'External Link Click',
-								});" target="_blank" class="social"><i class="fab fa-medium social"></i></a> -->
 			</div>
-			<!-- </ul> -->
+
 			<div class="row">
 				<div class="thumbnail">
-					<a href="https://moula.com.au/pay" target="_blank" onClick="gtag('event', 'Portfolio: Moula', {
-                  'event_category': 'External Link Click',
-                });">
-						<img src="images/moula.webp" class="portfolioitem" alt="Moula Mobile App">
+					<a href="https://www.myob.com/au/products/solo" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'solo',
+					});">
+						<img src="images/solo.webp" class="portfolioitem" alt="MYOB Solo Mobile App">
 
 						<div class="thumbnailtext">
-							<p class="title">Moula Mobile App</p>
-							<p class="subtitle">Moula Money</p>
-							<p class="subtitle">Technical Team Lead, Solution Architect</p>
+							<p class="title">Solo Mobile App</p>
+							<p class="subtitle">MYOB</p>
+							<p class="subtitle">Technical Lead, Solution Architect</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://www.digitalid.com/personal" target="_blank" onClick="gtag('event', 'Portfolio: Digital iD', {
-											'event_category': 'External Link Click',
-										});">
+					<a href="https://onepass.com.au/" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'onepass',
+					});">
+						<img src="images/onepass.webp" class="portfolioitem" alt="Onepass Mobile App">
+
+						<div class="thumbnailtext">
+							<p class="title">OnePass Mobile App</p>
+							<p class="subtitle">Wesfarmers OneDigital</p>
+							<p class="subtitle">Technical Lead, Solution Architect</p>
+						</div>
+					</a>
+				</div>
+				<div class="thumbnail">
+					<a href="https://moula.com.au/" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'moula_pay',
+					});">
+						<img src="images/moula.webp" class="portfolioitem" alt="Moula Mobile App">
+
+						<div class="thumbnailtext">
+							<p class="title">Moula Pay Mobile App</p>
+							<p class="subtitle">Moula Money</p>
+							<p class="subtitle">Technical Lead, Solution Architect</p>
+						</div>
+					</a>
+				</div>
+				<div class="thumbnail">
+					<a href="https://www.digitalid.com/personal" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'digitalid',
+					});">
 						<img src="images/digitalid.webp" class="portfolioitem" alt="Digital iD iOS App">
 
 						<div class="thumbnailtext">
 							<p class="title">Digital iD</p>
 							<p class="subtitle">Australia Post</p>
-							<p class="subtitle">Team Lead, Solution Design, CI/CD</p>
+							<p class="subtitle">Technical Lead</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://www.nab.com.au/personal/banking/mobile-banking-app" target="_blank" onClick="gtag('event', 'Portfolio: NAB Mobile Banking', {
-										'event_category': 'External Link Click',
-									});">
+					<a href="https://www.nab.com.au/personal/banking/mobile-banking-app" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'nab_mobile_banking',
+					});">
 						<img src="images/nab.webp" class="portfolioitem" alt="NAB Mobile Banking iOS App">
 						<div class="thumbnailtext">
 							<p class="title">NAB Mobile Banking</p>
@@ -154,59 +155,67 @@
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://www.corelogic.com.au/products/rpdatapro" target="_blank" onClick="gtag('event', 'Portfolio: RPDataPro', {
-										'event_category': 'External Link Click',
-									});">
+					<a href="https://www.corelogic.com.au/software-solutions/rp-data-mobile" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'corelogic',
+					});">
 						<img src="images/corelogic.webp" class="portfolioitem" alt="CoreLogic RPDataPro iPhone + iPad App">
 						<div class="thumbnailtext">
 							<p class="title">RP Data Professional</p>
 							<p class="subtitle">CoreLogic Australia & New Zealand</p>
-							<p class="subtitle">Consulting, Development, CI/CD</p>
+							<p class="subtitle">Consulting, Development</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="http://www.respiri.co/" target="_blank" onClick="gtag('event', 'Portfolio: AirSonea', {
-											'event_category': 'External Link Click',
-										});">
-						<img src="images/airsonea.webp" class="portfolioitem" alt="AirSonea iOS App + Hardware">
+					<a href="https://respiri.co/us/wheezo/" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'airsonea',
+					});">
+						<img src="images/airsonea.webp" class="portfolioitem" alt="AirSonea iOS App">
 						<div class="thumbnailtext">
-							<p class="title">AirSonea</p>
-							<p class="subtitle">Respiri Limited</p>
+							<p class="title">AirSonea/Wheezo</p>
+							<p class="subtitle">iSonea/Respiri Ltd</p>
 							<p class="subtitle">Development</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://www.beyondblue.org.au/media/news/news/2016/03/14/beyondblue-australian-first-smartphone-app-to-help-reduce-suicide-deaths"
-						target="_blank" onClick="gtag('event', 'Portfolio: BeyondNow', {
-										'event_category': 'External Link Click',
-									});">
+					<a href="https://www.lifeline.org.au/get-help/beyond-now/" target="_blank" onClick="gtag('event', 'click', {
+							event_name: 'click',
+							event_category: 'project_link',
+							event_label: 'beyondnow',
+						});">
 						<img src="images/beyondnow.webp" class="portfolioitem" alt="beyondnow iOS App">
 						<div class="thumbnailtext">
 							<p class="title">beyondnow</p>
-							<p class="subtitle">Beyond Blue</p>
+							<p class="subtitle">Beyond Blue/Lifeline</p>
 							<p class="subtitle">Technical Lead, Development</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://www.nab.com.au/business/online-banking/nab-connect-mobile" target="_blank" onClick="gtag('event', 'Portfolio: NAB Connect', {
-											'event_category': 'External Link Click',
-										});">
+					<a href="https://www.nab.com.au/business/online-banking/nab-connect-mobile" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'nabconnect',
+					});">
 						<img src="images/nabconnect.webp" class="portfolioitem" alt="NAB Connect Mobile iOS App">
 						<div class="thumbnailtext">
-							<p class="title">NAB Connect Mobile</p>
+							<p class="title">NAB Connect Business Banking</p>
 							<p class="subtitle">National Australia Bank</p>
 							<p class="subtitle">Consulting, Development</p>
 						</div>
 					</a>
 				</div>
 				<div class="thumbnail">
-					<a href="https://itunes.apple.com/au/app/skinnyme-tea-teatox-tracker/id934284978?mt=8" target="_blank"
-						onClick="gtag('event', 'Portfolio: SMT', {
-										'event_category': 'External Link Click',
-									});">
+					<a href="https://www.instagram.com/smtofficial/?hl=en" target="_blank" onClick="gtag('event', 'click', {
+							event_name: 'click',
+							event_category: 'project_link',
+							event_label: 'teatox',
+					});">
 						<img src="images/smt.webp" class="portfolioitem" alt="SkinnyMeTea Tea Tracker mobile-banking-app">
 						<div class="thumbnailtext">
 							<p class="title">SkinnyMeTea Tracker</p>
@@ -217,9 +226,11 @@
 				</div>
 
 				<div class="thumbnail">
-					<a href="http://a1testingandtagging.com.au/clevermode-test-and-tag-machine" target="_blank" onClick="gtag('event', 'Portfolio: Clevermode', {
-										'event_category': 'External Link Click',
-									});">
+					<a href="http://a1testingandtagging.com.au/clevermode-test-and-tag-machine" target="_blank" onClick="gtag('event', 'click', {
+						event_name: 'click',
+						event_category: 'project_link',
+						event_label: 'clevermode',
+					});">
 						<img src="images/clevermode.webp" class="portfolioitem" alt="Clevermode Android App + Hardware">
 						<div class="thumbnailtext">
 							<p class="title">Clevermode</p>
@@ -231,18 +242,12 @@
 			</div>
 		</section>
 
-		<!-- Footer -->
 		<footer id="footer">
 			<ul class="copyright">
 				<li>&copy; Michael Nguyen</li>
-				<li>Design: <a href="onepassapp://mobile?redirect=changeEmailSuccess">HTML5 UP</a></li>
-				<li>Design: <a href="onepassapp://mobile?redirect=changeEmailFailure">HTML5 DOWN</a></li>
 			</ul>
 		</footer>
-
 	</div>
-
-
 </body>
 
 </html>
