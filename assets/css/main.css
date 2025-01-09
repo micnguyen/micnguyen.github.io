@@ -103,8 +103,6 @@ div.thumbnail {
 
 div.thumbnail:hover {
 	transform: scale(1.05);
-	display: flex;
-	flex-direction: column;
 }
 
 div.thumbnail * {
@@ -119,10 +117,6 @@ div.social {
 
 a.social:hover {
 	color: #ff7496;
-}
-
-div.projectitems {
-	width: 100%;
 }
 
 p.title {
@@ -156,6 +150,7 @@ div.projectitems {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 100%;
 }
 
 img.portfolioitem {
@@ -170,20 +165,6 @@ i.social {
 
 i.social:hover {
 	transform: scale(1.1);
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
 }
 
 body {
@@ -502,13 +483,6 @@ ul.icons li a {
 ul.icons li a:before {
 	color: #ffffff;
 	text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
-}
-
-ul.icons li a:hover:before {
-	text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
-}
-
-ul.icons li a:before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -520,14 +494,12 @@ ul.icons li a:before {
 	text-indent: 0;
 }
 
-ul.icons li a:hover {
-	border-color: #ff7496;
+ul.icons li a:hover:before {
+	text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
 }
 
-@media screen and (max-width: 480px) {
-	ul.icons li a:before {
-		font-size: 1.5rem;
-	}
+ul.icons li a:hover {
+	border-color: #ff7496;
 }
 
 ul.actions {
