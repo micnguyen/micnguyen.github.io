@@ -104,19 +104,27 @@ div.thumbnail {
 	/* box-shadow: rgba(0,0,0,0.8) 0 0 10px; */
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 	overflow: hidden;
-	display: inline-grid;
+	/* display: inline-grid; */
 	border-radius: 6px;
 	/* border-radius: 5px; */
 	/* background: #313f47 */
 	/* margin: 50px; */
 	/* text-align: center */
 	transition: transform .2s;
+	display: flex;
+	flex-direction: column;
 }
 
 div.thumbnail:hover {
 	transform: scale(1.05);
+	display: flex;
+	flex-direction: column;
 }
 
+div.thumbnail * {
+	display: flex;
+	flex-direction: column;
+}
 
 div.social {
 	padding-top: 2em;
@@ -135,7 +143,7 @@ a.social:hover {
 	transform: scale(1.1);
 } */
 
-*/ div.row {
+div.projectitems {
 	width: 100%;
 }
 
@@ -160,7 +168,7 @@ a.social {
 div.thumbnailtext {
 	/* margin: 0px 0px 0px 0px; */
 	margin: 10px;
-	width: 100%;
+	width: auto;
 	background: #ffffff;
 	/* padding: 10px; */
 	/* padding-left: 5%; */
@@ -174,13 +182,20 @@ div.thumbnailtext {
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
-div.row {
-	/* display: inline-block; */
-	/* padding: 50px; */
-	/* max-height: 200px; */
-	/* height: 20%; */
-	/* width: 100; */
+/* div.row { */
+/* display: inline-block; */
+/* padding: 50px; */
+/* max-height: 200px; */
+/* height: 20%; */
+/* width: 100; */
 
+/* } */
+
+div.projectitems {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 img.portfolioitem {
@@ -506,8 +521,8 @@ label {
 }
 
 .intro {
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 5%;
+	padding-right: 5%;
 	font-family: "Open Sans", serif;
 	font-optical-sizing: auto;
 	font-weight: 300;
@@ -1040,8 +1055,13 @@ button:disabled,
 #footer .copyright {
 	margin: 0;
 	padding: 0;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	list-style: none;
+
+	font-family: "Open Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
 }
 
 #footer .copyright li {
@@ -1105,3 +1125,7 @@ button:disabled,
 body.is-ie #wrapper {
 	height: 100%;
 } */
+
+div.main {
+	min-width: 0;
+}
