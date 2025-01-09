@@ -214,14 +214,12 @@ table {
 }
 
 body {
-	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 *,
 *:before,
 *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -240,9 +238,6 @@ html {
 body {
 	height: 100%;
 	background-color: #ffffff;
-	background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(150, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
-	background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
-	background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
 	background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 0, 70, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg1.webp");
 	background-repeat: repeat, no-repeat, no-repeat;
 	background-size: 100px 100px, cover, cover;
@@ -284,9 +279,6 @@ textarea {
 }
 
 a {
-	-moz-transition: color 0.2s ease, border-color 0.2s ease;
-	-webkit-transition: color 0.2s ease, border-color 0.2s ease;
-	-ms-transition: color 0.2s ease, border-color 0.2s ease;
 	transition: color 0.2s ease, border-color 0.2s ease;
 	color: inherit;
 	text-decoration: none;
@@ -618,9 +610,6 @@ dl dd {
 }
 
 #footer {
-	-moz-align-self: -moz-flex-end;
-	-webkit-align-self: -webkit-flex-end;
-	-ms-align-self: -ms-flex-end;
 	align-self: flex-end;
 	width: 100%;
 	padding: 1.5em 0 0 0;
@@ -653,17 +642,8 @@ dl dd {
 }
 
 #wrapper {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
 	display: flex;
-	-moz-align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
 	align-items: center;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 1.5em;
 }
