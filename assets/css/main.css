@@ -89,7 +89,15 @@ video {
 	vertical-align: baseline;
 }
 
-div.thumbnail {
+div.portfolio {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+div.portfolioItem {
 	margin: 15px;
 	min-width: 200px;
 	max-width: 414px;
@@ -101,11 +109,11 @@ div.thumbnail {
 	flex-direction: column;
 }
 
-div.thumbnail:hover {
+div.portfolioItem:hover {
 	transform: scale(1.05);
 }
 
-div.thumbnail * {
+div.portfolioItem * {
 	display: flex;
 	flex-direction: column;
 }
@@ -134,7 +142,7 @@ a.social {
 	display: inline-block;
 }
 
-div.thumbnailtext {
+div.portfolioItemText {
 	margin: 10px;
 	width: auto;
 	background: #ffffff;
@@ -145,15 +153,7 @@ div.thumbnailtext {
 	font-size: 0.9em;
 }
 
-div.projectitems {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-}
-
-img.portfolioitem {
+img.portfolioItemImage {
 	width: 100%;
 	border-bottom: 1px solid #c8cccf;
 }
@@ -355,25 +355,6 @@ hr {
 	margin: 3em 0;
 }
 
-form {
-	margin: 0 0 1.5em 0;
-}
-
-form>.field {
-	margin: 0 0 1.5em 0;
-}
-
-form>.field> :last-child {
-	margin-bottom: 0;
-}
-
-label {
-	color: #313f47;
-	display: block;
-	font-size: 0.9em;
-	margin: 0 0 0.75em 0;
-}
-
 .intro {
 	padding-left: 5%;
 	padding-right: 5%;
@@ -382,31 +363,6 @@ label {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 0.9em;
-}
-
-::-webkit-input-placeholder {
-	color: #616f77 !important;
-	opacity: 1.0;
-}
-
-:-moz-placeholder {
-	color: #616f77 !important;
-	opacity: 1.0;
-}
-
-::-moz-placeholder {
-	color: #616f77 !important;
-	opacity: 1.0;
-}
-
-:-ms-input-placeholder {
-	color: #616f77 !important;
-	opacity: 1.0;
-}
-
-.formerize-placeholder {
-	color: #616f77 !important;
-	opacity: 1.0;
 }
 
 .icon {
@@ -437,21 +393,6 @@ ul {
 
 ul li {
 	padding-left: 0.5em;
-}
-
-ul.alt {
-	list-style: none;
-	padding-left: 0;
-}
-
-ul.alt li {
-	border-top: solid 1px #c8cccf;
-	padding: 0.5em 0;
-}
-
-ul.alt li:first-child {
-	border-top: 0;
-	padding-top: 0;
 }
 
 ul.icons {
@@ -500,35 +441,6 @@ ul.icons li a:hover:before {
 
 ul.icons li a:hover {
 	border-color: #ff7496;
-}
-
-ul.actions {
-	cursor: default;
-	list-style: none;
-	padding-left: 0;
-}
-
-ul.actions li {
-	display: inline-block;
-	padding: 0 0.75em 0 0;
-	vertical-align: middle;
-}
-
-ul.actions li:last-child {
-	padding-right: 0;
-}
-
-dl {
-	margin: 0 0 1.5em 0;
-}
-
-dl dt {
-	display: block;
-	margin: 0 0 0.75em 0;
-}
-
-dl dd {
-	margin-left: 1.5em;
 }
 
 #main {
@@ -622,8 +534,4 @@ dl dd {
 
 #wrapper>* {
 	z-index: 1;
-}
-
-div.main {
-	min-width: 0;
 }
