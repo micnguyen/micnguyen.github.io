@@ -2,27 +2,23 @@
 <html lang="en">
 
 <head>
-	<link rel="icon" href="images/favicon.png">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta name="description" content="Michael Nguyen is an Australian based mobile app software engineering lead">
+	<meta name="description"
+		content="Michael Nguyen is an Australia-based Technology & Engineering Leader, Head of Engineering, Vietnam at Mantel Group.">
+	<link rel="icon" href="images/favicon.png">
 
-	<!-- loading google font -->
+	<title>Michael Nguyen - Technology & Engineering Leader</title>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel='preload' as='style'
-		href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+	<link rel="preload" as="style"
+		href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap"
 		rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high" />
 
-	<title>Michael Nguyen - Mobile Engineering Lead</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="assets/fonts/fontawesome/css/brands.css" rel="stylesheet" />
-	<link href="assets/fonts/fontawesome/css/solid.css" rel="stylesheet" />
-	<link href="assets/fonts/fontawesome/css/fontawesome.css" rel="stylesheet" />
-	<link href="assets/fonts/fontawesome/css/brands.css" rel="stylesheet" />
-	<link href="assets/fonts/fontawesome/css/solid.css" rel="stylesheet" />
-
+	<link rel="stylesheet" href="assets/css/portfolio.css" />
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZJ0423V6N"></script>
@@ -30,234 +26,349 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'G-FZJ0423V6N');
-	</script>
 
-	<link rel="stylesheet" href="assets/css/main.css" />
+		function track(category, label) {
+			gtag('event', 'click', { event_name: 'click', event_category: category, event_label: label });
+		}
+	</script>
 </head>
 
 <body>
-	<div id="wrapper">
-		<div id="main">
-			<header>
-				<span class="avatar"><img src="images/avatar.webp" alt="Michael Nguyen Avatar" width="140" /></span>
-				<h1>MICHAEL NGUYEN</h1>
-				<p class="intro">Michael is a People & Product focused Software Engineering Lead.
+	<!-- icon sprite -->
+	<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+		<defs>
+			<symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+				<path d="M7 7h10v10" />
+				<path d="M7 17 17 7" />
+			</symbol>
+			<symbol id="i-mail" viewBox="0 0 24 24">
+				<rect width="20" height="16" x="2" y="4" rx="2" />
+				<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+			</symbol>
+			<symbol id="i-linkedin" viewBox="0 0 24 24">
+				<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+				<rect width="4" height="12" x="2" y="9" />
+				<circle cx="4" cy="4" r="2" />
+			</symbol>
+			<symbol id="i-github" viewBox="0 0 24 24">
+				<path
+					d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+				<path d="M9 18c-4.51 2-5-2-7-2" />
+			</symbol>
+			<symbol id="i-instagram" viewBox="0 0 24 24">
+				<rect width="20" height="20" x="2" y="2" rx="5" />
+				<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+				<path d="M17.5 6.5h.01" />
+			</symbol>
+			<symbol id="i-heart" viewBox="0 0 24 24">
+				<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+			</symbol>
+		</defs>
+	</svg>
 
-					<br /><br />With a wealth of experience building mobile & web apps across a number of industries, he bridges
-					his technical and interpersonal skillsets to form & work with high performing, engaged teams that focus on
-					engineering quality, learning, transparency & speed of delivery.
-
-					<br /><br />His skill set covers a broad spectrum of the software development landscape including Mobile
-					(Native & Cross Platform), Web, UI/UX design, CI/CD, DevOps, Automated Testing, Software Architecture, Project
-					Management and Delivery. He enjoys working with high-calibre, cross-disciplined teams creating easy to use
-					software for customers and enjoys working between the intersection of technical, product and business.
-
-					<br /><br />He is passionate about volunteering and helping communities close to his heart
-					through Strategy Consulting, Technology, Event Planning and Fundraising. He serves on the Community Advisory Panel for <a href="https://www.ctf.org.au" target="_blank" rel="noopener noreferrer" class="bio">The Children's Tumour Foundation</a> 
-					and as a Commitee Member for <a href="https://tnaaustralia.org.au" target="_blank" rel="noopener noreferrer" class="bio">Trigeminal Neuralgia Association Australia</a>.
-				</p>
-			</header>
-
-			<div class="social">
-				<a href="https://github.com/micnguyen" onClick="gtag('event', 'click', {
-					event_name: 'click',
-					event_category: 'social_link',
-					event_label: 'github',
-				});" target="_blank" class="social"><i class="fab fa-github social"></i></a>
-
-				<a href="mailto:contact@micnguyen.net" onClick="gtag('event', 'click', {
-					event_name: 'click',
-					event_category: 'social_link',
-					event_label: 'email',
-				});" target="_blank" class="social"><i class="fas fa-envelope social"></i></a>
-
-				<a href="https://www.linkedin.com/in/micngu/" onClick="gtag('event', 'click', {
-					event_name: 'click',
-					event_category: 'social_link',
-					event_label: 'linkedin',
-				});" target="_blank" class="social"><i class="fab fa-linkedin social"></i></a>
-
-				<a href="https://www.instagram.com/micnguyen0/" onClick="gtag('event', 'click', {
-					event_name: 'click',
-					event_category: 'social_link',
-					event_label: 'instagram',
-				});" target="_blank" class="social"><i class="fa-brands fa-square-instagram social"></i></a>
-			</div>
-
-			<div class="portfolio">
-				<div class="portfolioItem">
-					<a href="https://www.myob.com/au/products/solo" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'solo',
-					});">
-						<img src="images/solo.webp" class="portfolioItemImage" alt="MYOB Solo Mobile App" loading="lazy">
-
-						<div class="portfolioItemText">
-							<p class="title">Solo Mobile App</p>
-							<p class="subtitle">MYOB</p>
-							<p class="subtitle">Technical Lead, Solution Architect</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://onepass.com.au/" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'onepass',
-					});">
-						<img src="images/onepass.webp" class="portfolioItemImage" alt="Onepass Mobile App" loading="lazy">
-
-						<div class="portfolioItemText">
-							<p class="title">OnePass Mobile App</p>
-							<p class="subtitle">Wesfarmers OneDigital</p>
-							<p class="subtitle">Technical Lead, Solution Architect</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://moula.com.au/" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'moula_pay',
-					});">
-						<img src="images/moula.webp" class="portfolioitem" alt="Moula Mobile App" loading="lazy">
-
-						<div class="portfolioItemText">
-							<p class="title">Moula Pay Mobile App</p>
-							<p class="subtitle">Moula Money</p>
-							<p class="subtitle">Technical Lead, Solution Architect</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.digitalid.com/personal" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'digitalid',
-					});">
-						<img src="images/digitalid.webp" class="portfolioitem" alt="Digital iD iOS App" loading="lazy">
-
-						<div class="portfolioItemText">
-							<p class="title">Digital iD</p>
-							<p class="subtitle">Australia Post</p>
-							<p class="subtitle">Technical Lead</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.nab.com.au/personal/banking/mobile-banking-app" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'nab_mobile_banking',
-					});">
-						<img src="images/nab.webp" class="portfolioItemImage" alt="NAB Mobile Banking iOS App" loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">NAB Mobile Banking</p>
-							<p class="subtitle">National Australia Bank</p>
-							<p class="subtitle">Consulting, Development</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.corelogic.com.au/software-solutions/rp-data-mobile" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'corelogic',
-					});">
-						<img src="images/corelogic.webp" class="portfolioitem" alt="CoreLogic RPDataPro iPhone + iPad App"
-							loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">RP Data Professional</p>
-							<p class="subtitle">CoreLogic Australia & New Zealand</p>
-							<p class="subtitle">Consulting, Development</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://respiri.co/us/wheezo/" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'airsonea',
-					});">
-						<img src="images/airsonea.webp" class="portfolioitem" alt="AirSonea iOS App" loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">AirSonea/Wheezo</p>
-							<p class="subtitle">iSonea/Respiri Ltd</p>
-							<p class="subtitle">Development</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.lifeline.org.au/get-help/beyond-now/" target="_blank" onClick="gtag('event', 'click', {
-							event_name: 'click',
-							event_category: 'project_link',
-							event_label: 'beyondnow',
-						});">
-						<img src="images/beyondnow.webp" class="portfolioitem" alt="beyondnow iOS App" loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">beyondnow</p>
-							<p class="subtitle">Beyond Blue/Lifeline</p>
-							<p class="subtitle">Technical Lead, Development</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.nab.com.au/business/online-banking/nab-connect-mobile" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'nabconnect',
-					});">
-						<img src="images/nabconnect.webp" class="portfolioitem" alt="NAB Connect Mobile iOS App" loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">NAB Connect Business Banking</p>
-							<p class="subtitle">National Australia Bank</p>
-							<p class="subtitle">Consulting, Development</p>
-						</div>
-					</a>
-				</div>
-				<div class="portfolioItem">
-					<a href="https://www.instagram.com/smtofficial/?hl=en" target="_blank" onClick="gtag('event', 'click', {
-							event_name: 'click',
-							event_category: 'project_link',
-							event_label: 'teatox',
-					});">
-						<img src="images/smt.webp" class="portfolioitem" alt="SkinnyMeTea Tea Tracker mobile-banking-app"
-							loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">SkinnyMeTea Tracker</p>
-							<p class="subtitle">SkinnyMeTea</p>
-							<p class="subtitle">Technical Lead, Development</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="portfolioItem">
-					<a href="http://a1testingandtagging.com.au/clevermode-test-and-tag-machine" target="_blank" onClick="gtag('event', 'click', {
-						event_name: 'click',
-						event_category: 'project_link',
-						event_label: 'clevermode',
-					});">
-						<img src="images/clevermode.webp" class="portfolioitem" alt="Clevermode Android App + Hardware"
-							loading="lazy">
-						<div class="portfolioItemText">
-							<p class="title">Clevermode</p>
-							<p class="subtitle">DMCOM, A1 Testing & Tagging</p>
-							<p class="subtitle">Development</p>
-						</div>
-					</a>
-				</div>
-			</div>
+	<header class="masthead">
+		<div class="masthead__inner">
+			<span class="brand">Michael Nguyen</span>
+			<nav class="topnav" aria-label="Primary">
+				<a href="#about">About</a>
+				<a href="#work">Work</a>
+				<a href="#life">Life</a>
+				<a href="#contact" class="topnav__cta">Get in touch</a>
+			</nav>
 		</div>
+	</header>
 
-		<footer id="footer">
-			<ul class="copyright">
-				<li>&copy; 2025 Michael Nguyen</li>
-			</ul>
-		</footer>
-	</div>
+	<main class="shell">
+
+		<section id="about" class="hero">
+			<div>
+				<h1>Hi, I'm Michael &#128075;<br><br>I like building awesome products, with amazing people</h1>
+			</div>
+			<div>
+				<img class="hero__avatar" src="images/avatar.webp" alt="Michael Nguyen" width="232" height="232" />
+			</div>
+		</section>
+
+		<section class="bio" data-reveal>
+			<div class="bio__body">
+				<p>Michael is an Australia-based Technology &amp; Engineering Leader, currently building out engineering
+					teams as the Head of Engineering, Vietnam at <a href="https://mantelgroup.com.au/" target="_blank"
+						rel="noopener noreferrer">Mantel, an Australian next-gen consultancy pioneering AI-first
+						solutions</a>.</p>
+				<p>With a wealth of experience leading teams building innovative digital experiences, Michael bridges his
+					technical and interpersonal skillsets to form &amp; work with high performing, engaged teams that focus
+					on engineering quality, speed of delivery and business outcomes.</p>
+				<p>Outside of work, he is passionate about volunteering and helping communities close to his heart through
+					Strategy Consulting, Technology, Advocacy and Fundraising. He serves on the Community Advisory Panel for
+					<a href="https://www.ctf.org.au" target="_blank" rel="noopener noreferrer">The Children's Tumour
+						Foundation</a> and as a Committee Member for <a href="https://tnaaustralia.org.au" target="_blank"
+						rel="noopener noreferrer">Trigeminal Neuralgia Association Australia</a>.
+				</p>
+			</div>
+		</section>
+
+		<section id="work" class="section work" data-reveal>
+			<div class="section__head">
+				<h2>Work</h2>
+			</div>
+
+			<div class="grid">
+					<a class="card" href="https://www.myob.com/au/products/solo" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'solo')">
+						<div class="card__media">
+							<img src="images/solo.webp" alt="MYOB Solo Mobile App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">Solo Mobile App</h3>
+							<p class="card__company">MYOB</p>
+							<p class="card__blurb">Invoicing, expenses and tax for sole traders, built mobile-first.</p>
+						</div>
+					</a>
+					<a class="card" href="https://onepass.com.au/" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'onepass')">
+						<div class="card__media">
+							<img src="images/onepass.webp" alt="OnePass Mobile App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">OnePass Mobile App</h3>
+							<p class="card__company">Wesfarmers OneDigital</p>
+							<p class="card__blurb">Paid membership and delivery benefits across the Wesfarmers retail brands.</p>
+						</div>
+					</a>
+					<a class="card" href="https://moula.com.au/" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'moula_pay')">
+						<div class="card__media">
+							<img src="images/moula.webp" alt="Moula Pay Mobile App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">Moula Pay Mobile App</h3>
+							<p class="card__company">Moula Money</p>
+							<p class="card__blurb">Pay-later checkout for small business trade accounts.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.digitalid.com/personal" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'digitalid')">
+						<div class="card__media">
+							<img src="images/digitalid.webp" alt="Digital iD iOS App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">Digital iD</h3>
+							<p class="card__company">Australia Post</p>
+							<p class="card__blurb">Reusable digital identity and age verification for everyday transactions.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.nab.com.au/personal/banking/mobile-banking-app" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'nab_mobile_banking')">
+						<div class="card__media">
+							<img src="images/nab.webp" alt="NAB Mobile Banking iOS App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">NAB Mobile Banking</h3>
+							<p class="card__company">National Australia Bank</p>
+							<p class="card__blurb">Everyday banking, payments and card controls at consumer scale.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.corelogic.com.au/software-solutions/rp-data-mobile" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'corelogic')">
+						<div class="card__media">
+							<img src="images/corelogic.webp" alt="CoreLogic RP Data Professional app" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">RP Data Professional</h3>
+							<p class="card__company">CoreLogic Australia &amp; New Zealand</p>
+							<p class="card__blurb">Property data and valuation research for agents working in the field.</p>
+						</div>
+					</a>
+					<a class="card" href="https://respiri.co/us/wheezo/" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'airsonea')">
+						<div class="card__media">
+							<img src="images/airsonea.webp" alt="AirSonea iOS App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">AirSonea / Wheezo</h3>
+							<p class="card__company">iSonea / Respiri Ltd</p>
+							<p class="card__blurb">Wheeze detection paired over Bluetooth with a handheld respiratory device.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.lifeline.org.au/get-help/beyond-now/" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'beyondnow')">
+						<div class="card__media">
+							<img src="images/beyondnow.webp" alt="beyondnow iOS App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">beyondnow</h3>
+							<p class="card__company">Beyond Blue / Lifeline</p>
+							<p class="card__blurb">A suicide safety planning app designed alongside clinicians.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.nab.com.au/business/online-banking/nab-connect-mobile" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'nabconnect')">
+						<div class="card__media">
+							<img src="images/nabconnect.webp" alt="NAB Connect Mobile iOS App" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">NAB Connect Business Banking</h3>
+							<p class="card__company">National Australia Bank</p>
+							<p class="card__blurb">Payment approvals and account oversight for business customers.</p>
+						</div>
+					</a>
+					<a class="card" href="https://www.instagram.com/smtofficial/?hl=en" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'teatox')">
+						<div class="card__media">
+							<img src="images/smt.webp" alt="SkinnyMeTea Tracker app" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">SkinnyMeTea Tracker</h3>
+							<p class="card__company">SkinnyMeTea</p>
+							<p class="card__blurb">Daily tracking and reminders for a consumer wellness program.</p>
+						</div>
+					</a>
+					<a class="card" href="http://a1testingandtagging.com.au/clevermode-test-and-tag-machine" target="_blank" rel="noopener noreferrer" onclick="track('project_link', 'clevermode')">
+						<div class="card__media">
+							<img src="images/clevermode.webp" alt="Clevermode Android App and hardware" loading="lazy" width="800" height="430" />
+							<span class="card__cue" aria-hidden="true"><svg class="icon"><use href="#i-arrow-up-right" /></svg></span>
+						</div>
+						<div class="card__body">
+							<h3 class="card__title">Clevermode</h3>
+							<p class="card__company">DMCOM, A1 Testing &amp; Tagging</p>
+							<p class="card__blurb">Mobile app driving test-and-tag hardware for electrical compliance.</p>
+						</div>
+					</a>
+			</div>
+		</section>
+
+		<!--
+			=====================================================================
+			LIFE — SCAFFOLD. The cards below are placeholders; edit or delete them.
+
+			To finish a card:
+			  1. Drop an image in images/ (800x430-ish, .webp) and swap the
+			     placeholder panel for the commented-out <img> line.
+			  2. Fill in the href, title, company/role and blurb.
+			  3. Change the track() label to something meaningful.
+			Add or remove <a class="card"> blocks freely - the grid reflows.
+			If you'd rather not ship this section yet, delete this whole
+			<section> and the "Life" link in the nav above.
+			=====================================================================
+		-->
+		<section id="life" class="section life" data-reveal>
+			<div class="section__head">
+				<h2>Life</h2>
+			</div>
+
+			<div class="grid">
+				<a class="card" href="https://www.ctf.org.au" target="_blank" rel="noopener noreferrer"
+					onclick="track('life_link', 'ctf')">
+					<div class="card__media card__media--empty">
+						<!-- <img src="images/REPLACE-ME.webp" alt="" loading="lazy" width="800" height="430" /> -->
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-heart" />
+						</svg>
+						<span class="card__cue" aria-hidden="true"><svg class="icon">
+								<use href="#i-arrow-up-right" />
+							</svg></span>
+					</div>
+					<div class="card__body">
+						<h3 class="card__title">Children's Tumour Foundation</h3>
+						<p class="card__company">Community Advisory Panel</p>
+						<p class="card__blurb">PLACEHOLDER - say a sentence about the panel and what you contribute.</p>
+					</div>
+				</a>
+
+				<a class="card" href="https://tnaaustralia.org.au" target="_blank" rel="noopener noreferrer"
+					onclick="track('life_link', 'tna')">
+					<div class="card__media card__media--empty">
+						<!-- <img src="images/REPLACE-ME.webp" alt="" loading="lazy" width="800" height="430" /> -->
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-heart" />
+						</svg>
+						<span class="card__cue" aria-hidden="true"><svg class="icon">
+								<use href="#i-arrow-up-right" />
+							</svg></span>
+					</div>
+					<div class="card__body">
+						<h3 class="card__title">Trigeminal Neuralgia Association Australia</h3>
+						<p class="card__company">Committee Member</p>
+						<p class="card__blurb">PLACEHOLDER - say a sentence about the committee and what you contribute.</p>
+					</div>
+				</a>
+
+				<a class="card" href="#life" onclick="track('life_link', 'placeholder')">
+					<div class="card__media card__media--empty">
+						<!-- <img src="images/REPLACE-ME.webp" alt="" loading="lazy" width="800" height="430" /> -->
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-heart" />
+						</svg>
+						<span class="card__cue" aria-hidden="true"><svg class="icon">
+								<use href="#i-arrow-up-right" />
+							</svg></span>
+					</div>
+					<div class="card__body">
+						<h3 class="card__title">PLACEHOLDER - third thing</h3>
+						<p class="card__company">Role or organisation</p>
+						<p class="card__blurb">Speaking, mentoring, side projects, photography - whatever belongs here.</p>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<section id="contact" class="contact" data-reveal>
+			<div class="contact__panel">
+				<h2>Let's talk</h2>
+				<p class="contact__lede">I'm open to chatting about engineering leadership, AI and the Vietnam tech scene.
+				</p>
+				<div class="contact__links">
+					<a class="pill pill--primary" href="mailto:contact@micnguyen.net" onclick="track('social_link', 'email')">
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-mail" />
+						</svg>contact@micnguyen.net
+					</a>
+					<a class="pill" href="https://www.linkedin.com/in/micngu/" target="_blank" rel="noopener noreferrer"
+						onclick="track('social_link', 'linkedin')">
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-linkedin" />
+						</svg>LinkedIn
+					</a>
+					<a class="pill" href="https://github.com/micnguyen" target="_blank" rel="noopener noreferrer"
+						onclick="track('social_link', 'github')">
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-github" />
+						</svg>GitHub
+					</a>
+					<a class="pill" href="https://www.instagram.com/micnguyen0/" target="_blank" rel="noopener noreferrer"
+						onclick="track('social_link', 'instagram')">
+						<svg class="icon" aria-hidden="true">
+							<use href="#i-instagram" />
+						</svg>Instagram
+					</a>
+				</div>
+			</div>
+			<p class="colophon">&copy; 2025 Michael Nguyen</p>
+		</section>
+	</main>
+
+	<script>
+		// Scroll reveal. Sections are visible by default; we only arm the hidden
+		// state once we know JS (and IntersectionObserver) can undo it.
+		(function () {
+			var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			if (reduced || !('IntersectionObserver' in window)) return;
+
+			var io = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					entry.target.classList.add('is-visible');
+					io.unobserve(entry.target);
+				});
+			}, { threshold: 0.05 });
+
+			document.querySelectorAll('[data-reveal]').forEach(function (el) {
+				el.classList.add('is-armed');
+				io.observe(el);
+			});
+		})();
+	</script>
 </body>
 
 </html>
