@@ -268,16 +268,16 @@
 
 		<!--
 			=====================================================================
-			LIFE — SCAFFOLD. The cards below are placeholders; edit or delete them.
+			LIFE. The first two cards are real. The THIRD is still a placeholder
+			and says so on screen - finish it or delete it before going live.
 
-			To finish a card:
-			  1. Drop an image in images/ (800x430-ish, .webp) and swap the
-			     placeholder panel for the commented-out <img> line.
+			To finish that card:
+			  1. Drop an image in images/ (800x430, .webp - matches the card's
+			     aspect ratio exactly) and swap the placeholder panel for the
+			     commented-out <img> line.
 			  2. Fill in the href, title, company/role and blurb.
 			  3. Change the track() label to something meaningful.
 			Add or remove <a class="card"> blocks freely - the grid reflows.
-			If you'd rather not ship this section yet, delete this whole
-			<section> and the "Life" link in the nav above.
 			=====================================================================
 		-->
 		<section id="life" class="section life" data-reveal>
@@ -288,11 +288,8 @@
 			<div class="grid">
 				<a class="card" href="https://www.ctf.org.au" target="_blank" rel="noopener noreferrer"
 					onclick="track('life_link', 'ctf')">
-					<div class="card__media card__media--empty">
-						<!-- <img src="images/REPLACE-ME.webp" alt="" loading="lazy" width="800" height="430" /> -->
-						<svg class="icon" aria-hidden="true">
-							<use href="#i-heart" />
-						</svg>
+					<div class="card__media">
+						<img src="images/ctf_tv.webp" alt="Children&#39;s Tumour Foundation" loading="lazy" width="800" height="430" />
 						<span class="card__cue" aria-hidden="true"><svg class="icon">
 								<use href="#i-arrow-up-right" />
 							</svg></span>
@@ -300,17 +297,14 @@
 					<div class="card__body">
 						<h3 class="card__title">Children's Tumour Foundation</h3>
 						<p class="card__company">Community Advisory Panel</p>
-						<p class="card__blurb">PLACEHOLDER - say a sentence about the panel and what you contribute.</p>
+						<p class="card__blurb">Advisory, Advocacy and Fundraising for those with genetic disorders NF1 &amp; NF2</p>
 					</div>
 				</a>
 
 				<a class="card" href="https://tnaaustralia.org.au" target="_blank" rel="noopener noreferrer"
 					onclick="track('life_link', 'tna')">
-					<div class="card__media card__media--empty">
-						<!-- <img src="images/REPLACE-ME.webp" alt="" loading="lazy" width="800" height="430" /> -->
-						<svg class="icon" aria-hidden="true">
-							<use href="#i-heart" />
-						</svg>
+					<div class="card__media">
+						<img src="images/tnaa.webp" alt="Trigeminal Neuralgia Association Australia" loading="lazy" width="800" height="430" />
 						<span class="card__cue" aria-hidden="true"><svg class="icon">
 								<use href="#i-arrow-up-right" />
 							</svg></span>
@@ -318,7 +312,7 @@
 					<div class="card__body">
 						<h3 class="card__title">Trigeminal Neuralgia Association Australia</h3>
 						<p class="card__company">Committee Member</p>
-						<p class="card__blurb">PLACEHOLDER - say a sentence about the committee and what you contribute.</p>
+						<p class="card__blurb">Technology &amp; Media for those with facial pain condition Trigeminal Neuralgia</p>
 					</div>
 				</a>
 
