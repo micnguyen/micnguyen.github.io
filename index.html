@@ -18,6 +18,18 @@
 		href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap"
 		rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" fetchpriority="high" />
 
+	<script>
+		// Runs before first paint so a stored dark theme never flashes light.
+		// Light is the default for everyone; the OS preference is not consulted.
+		(function () {
+			try {
+				if (localStorage.getItem('theme') === 'dark') {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				}
+			} catch (e) { /* storage blocked (private mode): stay on light */ }
+		})();
+	</script>
+
 	<link rel="stylesheet" href="assets/css/portfolio.css" />
 
 	<!-- Google tag (gtag.js) -->
@@ -61,6 +73,13 @@
 				<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
 				<path d="M17.5 6.5h.01" />
 			</symbol>
+			<symbol id="i-sun" viewBox="0 0 24 24">
+				<circle cx="12" cy="12" r="4" />
+				<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+			</symbol>
+			<symbol id="i-moon" viewBox="0 0 24 24">
+				<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+			</symbol>
 			<symbol id="i-heart" viewBox="0 0 24 24">
 				<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
 			</symbol>
@@ -71,6 +90,15 @@
 		<div class="masthead__inner">
 			<span class="brand">Michael Nguyen</span>
 			<nav class="topnav" aria-label="Primary">
+				<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode"
+					title="Switch to dark mode">
+					<svg class="icon theme-toggle__moon" aria-hidden="true">
+						<use href="#i-moon" />
+					</svg>
+					<svg class="icon theme-toggle__sun" aria-hidden="true">
+						<use href="#i-sun" />
+					</svg>
+				</button>
 				<a href="#about">About</a>
 				<a href="#work">Work</a>
 				<a href="#life">Life</a>
@@ -92,7 +120,7 @@
 
 		<section class="bio" data-reveal>
 			<div class="bio__body">
-				<p>Michael is an Australia-based Technology &amp; Engineering Leader, currently building out engineering
+				<p>Michael is a Technology &amp; Software Engineering Leader, currently building out engineering
 					teams as the Head of Engineering, Vietnam at <a href="https://mantelgroup.com.au/" target="_blank"
 						rel="noopener noreferrer">Mantel, an Australian next-gen consultancy pioneering AI-first
 						solutions</a>.</p>
@@ -347,6 +375,34 @@
 			<p class="colophon">&copy; 2025 Michael Nguyen</p>
 		</section>
 	</main>
+
+	<script>
+		// Theme toggle. The stored value is the user's explicit choice and always
+		// wins; there is no system-preference fallback by design.
+		(function () {
+			var root = document.documentElement;
+			var btn = document.getElementById('theme-toggle');
+			if (!btn) return;
+
+			function label() {
+				var dark = root.getAttribute('data-theme') === 'dark';
+				var text = dark ? 'Switch to light mode' : 'Switch to dark mode';
+				btn.setAttribute('aria-label', text);
+				btn.setAttribute('title', text);
+			}
+
+			btn.addEventListener('click', function () {
+				var wasDark = root.getAttribute('data-theme') === 'dark';
+				if (wasDark) root.removeAttribute('data-theme');
+				else root.setAttribute('data-theme', 'dark');
+				try { localStorage.setItem('theme', wasDark ? 'light' : 'dark'); } catch (e) { }
+				label();
+				track('ui', wasDark ? 'theme_light' : 'theme_dark');
+			});
+
+			label();
+		})();
+	</script>
 
 	<script>
 		// Scroll reveal. Sections are visible by default; we only arm the hidden
