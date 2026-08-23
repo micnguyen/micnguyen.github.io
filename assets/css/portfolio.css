@@ -14,9 +14,15 @@
 	--color-page: #f7f7f6;
 	--color-card: #fff;
 	--color-hairline: color-mix(in srgb, var(--color-text) 9%, transparent);
+	/* Text that sits on an accent fill. */
+	--color-on-accent: #fff;
+	/* Ink for the background dot grid. */
+	--dot-ink: color-mix(in srgb, #201e1d 8%, transparent);
 
 	--shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
 	--shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+
+	color-scheme: light;
 
 	--font-body: "Instrument Sans", system-ui, sans-serif;
 	--font-heading: "Space Grotesk", system-ui, sans-serif;
@@ -25,6 +31,43 @@
 
 	--ease-out: cubic-bezier(.2, .7, .2, 1);
 	--gutter: clamp(20px, 4vw, 44px);
+}
+
+/*
+  Dark theme. Opt-in via data-theme="dark" on <html> - set by the toggle and
+  restored from localStorage. The system preference is deliberately NOT
+  consulted: light is the default for everyone on a first visit.
+
+  Only tokens are restated here. --color-hairline and the masthead's tint are
+  written in terms of var(--color-text) / var(--color-page), so they re-resolve
+  against these values on their own.
+*/
+:root[data-theme="dark"] {
+	--color-text: #e8e6e3;
+	--color-page: #14171a;
+	--color-card: #1c2023;
+	--color-surface: #262b2f;
+
+	/* The accent ramp inverts: on a dark ground the light steps carry the
+	   contrast, so accent fills take dark text rather than white. */
+	--color-accent: #5cc2e8;
+	--color-accent-600: #9adcf5;
+	--color-accent-700: #6ecbec;
+	--color-on-accent: #0b1417;
+
+	--color-hairline: color-mix(in srgb, var(--color-text) 14%, transparent);
+	--dot-ink: color-mix(in srgb, #ffffff 6%, transparent);
+
+	/* Ink-tinted shadows vanish on a dark ground; these are true black. */
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, .55);
+	--shadow-lg: 0 12px 32px rgba(0, 0, 0, .65);
+
+	color-scheme: dark;
+}
+
+/* 50% ink clears 4.5:1 on paper but not on the dark ground at 11.5px. */
+:root[data-theme="dark"] .colophon {
+	color: color-mix(in srgb, var(--color-text) 66%, transparent);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -42,9 +85,10 @@ body {
 	font-size: 15px;
 	line-height: 1.55;
 	background-color: var(--color-page);
-	background-image: radial-gradient(color-mix(in srgb, #201e1d 8%, transparent) 1px, transparent 1px);
+	background-image: radial-gradient(var(--dot-ink) 1px, transparent 1px);
 	background-size: 22px 22px;
 	background-position: -1px -1px;
+	transition: background-color .25s ease, color .25s ease;
 }
 
 a { color: var(--color-accent-700); text-decoration: none; }
@@ -109,7 +153,7 @@ h1, h2, h3 {
 .topnav {
 	display: flex;
 	align-items: center;
-	gap: 4px;
+	gap: 10px;
 	font-size: 14px;
 	min-width: 0;
 }
@@ -123,15 +167,42 @@ h1, h2, h3 {
 
 .topnav a:hover { background: color-mix(in srgb, var(--color-text) 6%, transparent); }
 
-.topnav__cta {
+.theme-toggle {
+	display: grid;
+	place-items: center;
+	flex: none;
+	width: 32px;
+	height: 32px;
+	margin-right: 4px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: var(--color-text);
+	font-size: 17px;
+	cursor: pointer;
+	transition: background .2s ease;
+}
+
+.theme-toggle:hover { background: color-mix(in srgb, var(--color-text) 8%, transparent); }
+
+/* The button shows the theme you'd switch TO, so the moon shows on paper. */
+.theme-toggle__sun { display: none; }
+:root[data-theme="dark"] .theme-toggle__moon { display: none; }
+:root[data-theme="dark"] .theme-toggle__sun { display: block; }
+
+/* Scoped under .topnav so it outranks `.topnav a` (0-1-1); the bare class
+   (0-1-0) lost, silently dropping both the fill's text colour and every
+   mobile padding override below. */
+.topnav .topnav__cta {
 	padding: 7px 15px;
 	background: var(--color-accent);
-	color: #fff;
+	color: var(--color-on-accent);
 	font-weight: 500;
 	white-space: nowrap;
 }
 
-.topnav__cta:hover { background: var(--color-accent-600); color: #fff; }
+.topnav .topnav__cta:hover { background: var(--color-accent-600); color: var(--color-on-accent); }
 
 /* — page shell — */
 
@@ -222,7 +293,8 @@ h1, h2, h3 {
 	overflow: hidden;
 	color: inherit;
 	box-shadow: var(--shadow-sm);
-	transition: transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;
+	transition: transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease,
+		background-color .25s ease;
 }
 
 .card:hover,
@@ -260,7 +332,7 @@ h1, h2, h3 {
 	place-items: center;
 	border-radius: 999px;
 	background: var(--color-accent);
-	color: #fff;
+	color: var(--color-on-accent);
 	font-size: 15px;
 	opacity: 0;
 	transform: scale(.7);
@@ -322,6 +394,7 @@ h1, h2, h3 {
 	border-radius: 24px;
 	padding: clamp(28px, 4vw, 52px);
 	box-shadow: var(--shadow-sm);
+	transition: background-color .25s ease, border-color .25s ease;
 }
 
 .contact__panel h2 {
@@ -361,11 +434,11 @@ h1, h2, h3 {
 .pill--primary {
 	background: var(--color-accent);
 	border-color: var(--color-accent);
-	color: #fff;
+	color: var(--color-on-accent);
 	font-weight: 500;
 }
 
-.pill--primary:hover { background: var(--color-accent-600); border-color: var(--color-accent-600); color: #fff; }
+.pill--primary:hover { background: var(--color-accent-600); border-color: var(--color-accent-600); color: var(--color-on-accent); }
 
 .colophon {
 	margin: 26px 0 0;
@@ -393,17 +466,53 @@ h1, h2, h3 {
 	.bio__body { font-size: 13.5px; text-align: left; }
 	.hero { gap: 18px; }
 	.brand { font-size: 14px; }
-	.topnav { flex-wrap: nowrap; gap: 0; font-size: 13px; }
-	.topnav a { padding: 6px 8px; white-space: nowrap; }
-	.topnav__cta { padding: 6px 12px; }
+	.topnav { flex-wrap: nowrap; gap: 10px; font-size: 13px; }
+	.topnav a { padding: 7px 12px; white-space: nowrap; }
+	.topnav .topnav__cta { padding: 6px 12px; }
 	.hero__avatar { width: clamp(84px, 24vw, 150px); }
 }
 
-/* Below this the brand and four nav items no longer fit on one line and the
-   "Get in touch" pill gets clipped; the hero states the name anyway. */
-@media (max-width: 520px) {
-	.brand { display: none; }
-	.masthead__inner { justify-content: flex-end; }
+/*
+  Phones. The brand stays put - it is the only persistent statement of whose
+  site this is once the hero scrolls away. Everything else gives up room to
+  keep it, and the gutter tightens so the row still fits a 320px screen.
+*/
+@media (max-width: 560px) {
+	.masthead__inner { gap: 8px; padding-inline: 14px; }
+	/* Last-resort valve: if Sora fails and a wider fallback renders, the brand
+	   ellipsises rather than shoving the nav off the right edge. */
+	.brand { font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+	.topnav { font-size: 12px; gap: 8px; }
+	.topnav a { padding: 6px 8px; }
+	.topnav .topnav__cta { padding: 6px 11px; }
+	.theme-toggle { width: 28px; height: 28px; margin-right: 2px; font-size: 15px; }
+}
+
+/*
+  Boundary is 440, not 400: the 560 tier's larger type and padding need ~423px
+  of masthead before they fit, so applying them at 401 truncated the brand.
+*/
+@media (max-width: 440px) {
+	.masthead__inner { gap: 6px; padding-inline: 10px; }
+	.brand { font-size: 12px; letter-spacing: -0.04em; }
+	/* Slack in this band runs from ~7px at 360 to ~22px at 375, so the gap
+	   tracks the viewport rather than being pinned to the worst case. */
+	.topnav { font-size: 11.5px; gap: clamp(2px, calc((100vw - 348px) / 4), 8px); }
+	.topnav a { padding: 5px 5px; }
+	.topnav .topnav__cta { padding: 5px 9px; }
+	.theme-toggle { width: 26px; height: 26px; margin-right: 1px; font-size: 14px; }
+}
+
+/* 320px-class devices only. Everything from 360px up has ~35px+ of slack;
+   this last notch buys the brand the ~6px it needs to render in full. */
+@media (max-width: 340px) {
+	.masthead__inner { padding-inline: 6px; }
+	.brand { font-size: 11.5px; }
+	/* The roomier spacing above does not fit here alongside the full brand.
+	   The brand wins; the gap clamp above already bottoms out at 2px here. */
+	.topnav a { padding: 5px 3px; }
+	.topnav .topnav__cta { padding: 5px 7px; }
+	.theme-toggle { margin-right: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
