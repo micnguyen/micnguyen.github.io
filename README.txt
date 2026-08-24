@@ -1,1 +1,0 @@
-Just my personal website at [micnguyen.net](https://micnguyen.net). Hacked together real bad so ignore all code :) 
