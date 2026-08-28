@@ -374,16 +374,6 @@ h1, h2, h3 {
 	text-wrap: pretty;
 }
 
-/* Placeholder panel for Life cards that don't have an image yet.
-   Replace the whole .card__media block with an <img> to finish a card. */
-.card__media--empty {
-	display: grid;
-	place-items: center;
-	background: color-mix(in srgb, var(--color-accent) 8%, var(--color-page));
-	color: color-mix(in srgb, var(--color-accent-700) 55%, transparent);
-	font-size: 34px;
-}
-
 /* — contact — */
 
 .contact {
@@ -405,11 +395,17 @@ h1, h2, h3 {
 	margin: 0 0 10px;
 }
 
+/*
+  No max-width: the lede is one short sentence and a measure cap only forced it
+  onto a second line on desktop, where the panel has room to spare. It inherits
+  the body size so it sits with the rest of the page's prose, and text-wrap
+  pretty keeps the wrap tidy once the panel does get narrow on phones.
+*/
 .contact__lede {
 	margin: 0 0 clamp(22px, 3vw, 32px);
-	font-size: 16.5px;
+	font-size: inherit;
 	color: color-mix(in srgb, var(--color-text) 72%, transparent);
-	max-width: 44ch;
+	text-wrap: pretty;
 }
 
 .contact__links {
