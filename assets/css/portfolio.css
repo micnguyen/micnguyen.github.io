@@ -313,6 +313,7 @@ h1, h2, h3 {
 	overflow: hidden;
 	aspect-ratio: 800 / 430;
 	background: var(--color-surface);
+	border-bottom: 1px dashed color-mix(in srgb, var(--color-accent) 35%, transparent);
 }
 
 .card__media img {
@@ -380,7 +381,6 @@ h1, h2, h3 {
 	place-items: center;
 	background: color-mix(in srgb, var(--color-accent) 8%, var(--color-page));
 	color: color-mix(in srgb, var(--color-accent-700) 55%, transparent);
-	border-bottom: 1px dashed color-mix(in srgb, var(--color-accent) 35%, transparent);
 	font-size: 34px;
 }
 
