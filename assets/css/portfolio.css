@@ -73,6 +73,11 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
+	/* Safari 26 colours the browser chrome from the background of the element at
+	   the top of the viewport, not from the theme-color meta. Only <body> carried
+	   --color-page, so <html> resolved transparent and Safari fell back to white.
+	   Painting it here tracks the theme toggle for free. */
+	background-color: var(--color-page);
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%;
@@ -126,10 +131,23 @@ h1, h2, h3 {
 	position: sticky;
 	top: 0;
 	z-index: 20;
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
-	background: color-mix(in srgb, var(--color-page) 78%, transparent);
+	/* Opaque on phones, on purpose. Safari 26 tints the browser chrome from the
+	   background of whatever sits at the top of the viewport and re-reads it on
+	   every paint - but a translucent backdrop-filter layer is not something it
+	   will track, so the status bar stayed on the load-time theme after the
+	   toggle. A flat --color-page keeps the chrome in step with the theme. The
+	   frosted masthead is restored below, where there is no status bar to tint. */
+	background: var(--color-page);
 	border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+
+/* No status bar to tint at this width, so the frosted masthead comes back. */
+@media (min-width: 768px) {
+	.masthead {
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		background: color-mix(in srgb, var(--color-page) 78%, transparent);
+	}
 }
 
 .masthead__inner {
