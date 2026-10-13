@@ -458,36 +458,57 @@ h1, h2, h3 {
 .pill--primary:hover { background: var(--color-accent-600); border-color: var(--color-accent-600); color: var(--color-on-accent); }
 
 /*
-  Low-key photo strip: small, slightly desaturated thumbnails under the links so
-  they add warmth without competing with the call to action. Full colour on hover.
+  Event photos as a quiet backdrop: a 2x2 collage pinned to the right of the
+  panel, desaturated and masked so it fades out before reaching the copy. The
+  panel isolates its own stacking context so the collage sits behind the text.
 */
-.contact__photos {
-	list-style: none;
-	margin: clamp(26px, 3.5vw, 40px) 0 0;
-	padding: clamp(18px, 2.5vw, 26px) 0 0;
-	border-top: 1px solid var(--color-hairline);
+.contact__panel {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.contact__bg {
+	position: absolute;
+	inset: 0 0 0 auto;
+	width: 58%;
+	z-index: -1;
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 10px;
-	max-width: 560px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	opacity: .5;
+	filter: grayscale(.6);
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 55%);
+	mask-image: linear-gradient(to right, transparent, #000 55%);
+	pointer-events: none;
 }
 
-.contact__photos img {
-	display: block;
+.contact__bg img {
 	width: 100%;
-	height: auto;
-	aspect-ratio: 4 / 3;
+	height: 100%;
 	object-fit: cover;
-	border-radius: 10px;
-	filter: grayscale(.35) saturate(.85);
-	opacity: .88;
-	transition: filter .3s ease, opacity .3s ease;
 }
 
-.contact__photos li:hover img { filter: none; opacity: 1; }
+:root[data-theme="dark"] .contact__bg { opacity: .35; }
 
-@media (max-width: 440px) {
-	.contact__photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Keep the outline pills legible where they overlap the photos. */
+.contact .pill:not(.pill--primary) {
+	background: color-mix(in srgb, var(--color-card) 82%, transparent);
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+}
+
+.contact .pill:not(.pill--primary):hover { background: var(--color-surface); }
+
+@media (max-width: 820px) {
+	.contact__bg {
+		width: 100%;
+		opacity: .22;
+		-webkit-mask-image: linear-gradient(to bottom, transparent 10%, #000 85%);
+		mask-image: linear-gradient(to bottom, transparent 10%, #000 85%);
+	}
+
+	:root[data-theme="dark"] .contact__bg { opacity: .2; }
 }
 
 .colophon {
