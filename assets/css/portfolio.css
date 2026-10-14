@@ -275,76 +275,52 @@ h1, h2, h3 {
 
 /* — bio — */
 
+/*
+  Event photos as a quiet backdrop behind the bio: a 2x2 collage on the right,
+  desaturated, low opacity and feathered with a radial mask that reaches zero
+  at every edge, so it has no hard borders against the page. The section isolates its own stacking context so the
+  collage sits behind the text.
+*/
 .bio {
 	padding: clamp(16px, 2.5vw, 32px) 0 0;
-	display: grid;
-	grid-template-columns: minmax(0, 76ch) minmax(0, 1fr);
-	gap: clamp(32px, 5vw, 72px);
-	align-items: center;
+	position: relative;
+	isolation: isolate;
 }
 
-/*
-  Event photos fanned beside the bio like loose prints: a 2x2 grid with small
-  alternating tilts and offsets so they overlap slightly. Hovering one
-  straightens it and lifts it above its neighbours.
-*/
-.bio__photos {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.bio__bg {
+	position: absolute;
+	top: -12%;
+	bottom: -12%;
+	right: 0;
+	width: 50%;
+	z-index: -1;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 0;
-	max-width: 460px;
-	justify-self: center;
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	opacity: .34;
+	filter: grayscale(.6);
+	-webkit-mask-image: radial-gradient(closest-side, #000 45%, transparent);
+	mask-image: radial-gradient(closest-side, #000 45%, transparent);
+	pointer-events: none;
+}
+
+.bio__bg img {
 	width: 100%;
-}
-
-.bio__photos li {
-	--tilt: -4deg;
-	--dx: 6%;
-	--dy: 4%;
-	position: relative;
-	padding: 6px;
-	background: var(--color-card);
-	border-radius: 12px;
-	box-shadow: var(--shadow-lg);
-	transform: translate(var(--dx), var(--dy)) rotate(var(--tilt));
-	transition: transform .35s var(--ease-out), box-shadow .35s ease;
-}
-
-.bio__photos li:nth-child(2) { --tilt: 3deg; --dx: -6%; --dy: 10%; }
-.bio__photos li:nth-child(3) { --tilt: 2.5deg; --dx: 8%; --dy: -6%; }
-.bio__photos li:nth-child(4) { --tilt: -3deg; --dx: -4%; --dy: 0%; }
-
-.bio__photos li:hover {
-	z-index: 1;
-	transform: translate(var(--dx), var(--dy)) rotate(0) scale(1.06);
-}
-
-.bio__photos img {
-	display: block;
-	width: 100%;
-	height: auto;
-	aspect-ratio: 4 / 3;
+	height: 100%;
 	object-fit: cover;
-	border-radius: 7px;
 }
+
+:root[data-theme="dark"] .bio__bg { opacity: .28; }
 
 @media (max-width: 820px) {
-	.bio { grid-template-columns: minmax(0, 1fr); }
-
-	.bio__photos {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		max-width: none;
-		padding: 4px 6px 8px;
+	.bio__bg {
+		width: 100%;
+		opacity: .11;
+		-webkit-mask-image: radial-gradient(closest-side, #000 40%, transparent);
+		mask-image: radial-gradient(closest-side, #000 40%, transparent);
 	}
 
-	.bio__photos li { padding: 4px; border-radius: 9px; --dx: 0%; --dy: 0%; }
-	.bio__photos li:nth-child(n) { --dx: 0%; --dy: 0%; }
-	.bio__photos li:nth-child(2) { margin-left: -6%; }
-	.bio__photos li:nth-child(3) { margin-left: -6%; }
-	.bio__photos li:nth-child(4) { margin-left: -6%; }
+	:root[data-theme="dark"] .bio__bg { opacity: .1; }
 }
 
 .bio__body {
