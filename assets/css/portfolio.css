@@ -291,6 +291,37 @@ h1, h2, h3 {
 .bio__body p { margin: 0 0 12px; }
 .bio__body p:last-child { margin: 0; }
 
+/*
+  Full-bleed photo strip between the bio and Work: breaks out of .shell to the
+  viewport edges (html clips horizontal overflow, so 100vw is safe) and splits
+  the width into four equal 4:3 frames. Slightly muted, full colour on hover.
+*/
+.photo-strip {
+	list-style: none;
+	padding: 0;
+	width: 100vw;
+	margin: clamp(40px, 6vw, 80px) 0 0 calc(50% - 50vw);
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.photo-strip img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	filter: grayscale(.3) saturate(.9);
+	transition: filter .3s ease;
+}
+
+.photo-strip li:hover img { filter: none; }
+
+/* Phones: four across gets too small to read, so wrap to 2x2. */
+@media (max-width: 560px) {
+	.photo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* — card grids — */
 
 .work { padding: clamp(48px, 7vw, 96px) 0 0; }
