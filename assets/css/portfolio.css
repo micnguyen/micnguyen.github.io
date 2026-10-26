@@ -25,8 +25,8 @@
 	color-scheme: light;
 
 	--font-body: "Instrument Sans", system-ui, sans-serif;
-	--font-heading: "Space Grotesk", system-ui, sans-serif;
-	--font-brand: "Sora", system-ui, sans-serif;
+	--font-heading: "Fraunces", Georgia, serif;
+	--font-brand: "Fraunces", Georgia, serif;
 	--font-mono: "JetBrains Mono", ui-monospace, monospace;
 
 	--ease-out: cubic-bezier(.2, .7, .2, 1);
@@ -104,8 +104,13 @@ img { display: block; max-width: 100%; }
 h1, h2, h3 {
 	font-family: var(--font-heading);
 	letter-spacing: -0.03em;
-	font-weight: 600;
+	font-weight: 400;
 	margin: 0;
+}
+
+/* Fraunces' soft, wonky cut - rounded terminals give it a Cooper-style warmth. */
+h1, h2, h3, .brand {
+	font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 *:focus-visible {
@@ -162,7 +167,7 @@ h1, h2, h3 {
 
 .brand {
 	font-family: var(--font-brand);
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 16px;
 	letter-spacing: -0.03em;
 	white-space: nowrap;
@@ -405,6 +410,7 @@ h1, h2, h3 {
 
 .card__title {
 	font-size: 17px;
+	font-weight: 500;
 	line-height: 1.25;
 }
 
@@ -527,7 +533,7 @@ h1, h2, h3 {
 */
 @media (max-width: 560px) {
 	.masthead__inner { gap: 8px; padding-inline: 14px; }
-	/* Last-resort valve: if Sora fails and a wider fallback renders, the brand
+	/* Last-resort valve: if Fraunces fails and a wider fallback renders, the brand
 	   ellipsises rather than shoving the nav off the right edge. */
 	.brand { font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 	.topnav { font-size: 12px; gap: 8px; }
