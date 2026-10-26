@@ -4,17 +4,6 @@
   Tokens below are the subset of the Broadsheet design system this page uses.
 */
 
-/* Cooper Md BT ships in one weight. The face claims the whole 400-700 range so
-   headings set at 500/600 use the real glyphs instead of a faux bold. */
-@font-face {
-	font-family: "Cooper";
-	src: url("../fonts/cooper-md-bt-medium.woff2") format("woff2"),
-		url("../fonts/cooper-md-bt-medium.ttf") format("truetype");
-	font-weight: 400 700;
-	font-style: normal;
-	font-display: swap;
-}
-
 :root {
 	--color-text: #201e1d;
 	--color-surface: #eae9e9;
@@ -36,8 +25,8 @@
 	color-scheme: light;
 
 	--font-body: "Instrument Sans", system-ui, sans-serif;
-	--font-heading: "Cooper", Georgia, serif;
-	--font-brand: "Cooper", Georgia, serif;
+	--font-heading: "Fraunces", Georgia, serif;
+	--font-brand: "Fraunces", Georgia, serif;
 	--font-mono: "JetBrains Mono", ui-monospace, monospace;
 
 	--ease-out: cubic-bezier(.2, .7, .2, 1);
@@ -117,6 +106,11 @@ h1, h2, h3 {
 	letter-spacing: -0.03em;
 	font-weight: 600;
 	margin: 0;
+}
+
+/* Fraunces' soft, wonky cut - rounded terminals give it a Cooper-style warmth. */
+h1, h2, h3, .brand {
+	font-variation-settings: "SOFT" 100, "WONK" 1;
 }
 
 *:focus-visible {
@@ -538,7 +532,7 @@ h1, h2, h3 {
 */
 @media (max-width: 560px) {
 	.masthead__inner { gap: 8px; padding-inline: 14px; }
-	/* Last-resort valve: if Cooper fails and a wider fallback renders, the brand
+	/* Last-resort valve: if Fraunces fails and a wider fallback renders, the brand
 	   ellipsises rather than shoving the nav off the right edge. */
 	.brand { font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 	.topnav { font-size: 12px; gap: 8px; }
