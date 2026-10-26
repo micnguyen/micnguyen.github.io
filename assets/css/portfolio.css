@@ -104,7 +104,7 @@ img { display: block; max-width: 100%; }
 h1, h2, h3 {
 	font-family: var(--font-heading);
 	letter-spacing: -0.03em;
-	font-weight: 600;
+	font-weight: 400;
 	margin: 0;
 }
 
@@ -167,7 +167,7 @@ h1, h2, h3, .brand {
 
 .brand {
 	font-family: var(--font-brand);
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 16px;
 	letter-spacing: -0.03em;
 	white-space: nowrap;
@@ -410,6 +410,7 @@ h1, h2, h3, .brand {
 
 .card__title {
 	font-size: 17px;
+	font-weight: 500;
 	line-height: 1.25;
 }
 
